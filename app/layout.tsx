@@ -1,8 +1,10 @@
 import React from "react";
 import "./globals.css";
+import "react-pdf/dist/Page/TextLayer.css";
+import "react-pdf/dist/Page/AnnotationLayer.css";
 
 export const metadata = {
-  title: "LKAS HARA Builder",
+  title: "HARA Report Generator",
 };
 
 export default function RootLayout({

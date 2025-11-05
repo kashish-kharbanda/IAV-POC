@@ -116,3 +116,14 @@ body {
 
 .footer { margin-top: 16px; display: flex; gap: 8px; align-items: center; justify-content: space-between; }
 
+/* Top tabs navigation */
+.tabs { display: flex; gap: 8px; align-items: center; border-bottom: 1px solid var(--border); margin: -6px 0 16px 0; }
+.tab { background: transparent; color: var(--text); border: none; padding: 8px 12px; border-radius: 10px 10px 0 0; cursor: pointer; font-weight: 600; }
+.tab:hover { background: rgba(255,255,255,0.05); }
+.tab.active { background: #172448; border: 1px solid var(--border); border-bottom-color: transparent; }
+
+/* PDF viewer */
+.pdf-container { overflow: auto; max-height: 70vh; border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: rgba(255,255,255,0.02); }
+.pdf-page { margin: 0 auto 16px auto; }
+.pdf-highlights { position: absolute; inset: 0; pointer-events: none; z-index: 3; }
+.pdf-highlight-box { position: absolute; background: rgba(255, 235, 59, 0.38); border-radius: 2px; }
