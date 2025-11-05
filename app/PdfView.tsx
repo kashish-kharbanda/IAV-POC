@@ -56,7 +56,14 @@ export function PdfView(props: PdfViewProps) {
       onLoadError={(e: unknown) => onError?.((e as any)?.message || "Failed to load PDF")}
     >
       {Array.from({ length: numPages || 0 }).map((_, i) => (
-        <div key={i} className="pdf-page" ref={(el) => (pageRefs.current[i] = el)} style={{ position: "relative" }}>
+        <div
+          key={i}
+          className="pdf-page"
+          ref={(el) => {
+            pageRefs.current[i] = el;
+          }}
+          style={{ position: "relative" }}
+        >
           <Page
             pageNumber={i + 1}
             renderAnnotationLayer={false}
